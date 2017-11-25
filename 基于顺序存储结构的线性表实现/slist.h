@@ -1,8 +1,10 @@
 /* Linear Table On Sequence Structure */
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
-
+#include <string.h>
 /*--------------------page 10 on textbook ----------------------------------*/
 #define TRUE 1
 #define FALSE 0
@@ -14,7 +16,7 @@
 typedef int status;
 typedef int ElemType; //数据元素类型定义
 
-					  /*--------------------page 22 on textbook ----------------------------------*/
+/*--------------------page 22 on textbook ----------------------------------*/
 #define LIST_INIT_SIZE 100   //线性表存储空间的初始分配量
 #define LISTINCREMENT  10    //线性表存储空间的分配增量
 typedef struct {  //顺序表（顺序结构）的定义
@@ -35,5 +37,7 @@ status NextElem(SqList L,ElemType cur_e,ElemType & next_e);
 status ListInsert(SqList & L,int i,ElemType e);
 status ListDelete(SqList & L, int i, ElemType & e);
 status ListTrabverse(SqList L);  //简化过
-								 /*------------------------------------------------------*/
+status Load_data(SqList &L);
+status Save_data(SqList L);
+/*------------------------------------------------------*/
 
